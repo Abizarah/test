@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>
+        Abizarah JavaScript Challenge
+        <p>2020</p>
+        <h3>
+          <p id="demo1"></p>
+        </h3>
+      </h1>
+      <h2>30DaysOfJavaScript Challenge</h2>
+      <ul>
+        <li>30DaysOfPython Challenge Done</li>
+        <li>30DaysOfJavaScript Challenge Ongoing</li>
+        <li>30DaysOfReact Challenge Coming</li>
+        <li>30DaysOfFullStack Challenge Coming</li>
+        <li>30DaysOfDataAnalysis Challenge Coming</li>
+        <li>30DaysOfReactNative Challenge Coming</li>
+        <li>30DaysOfMachineLearning Challenge Coming</li>
+      </ul>
+    </div>
+    <script>
+      //   const stringS = document.querySelectorAll("li")[1].textContent;
+      // let tanggal = new Date();
+      // abc =
+      //   tanggal.getUTCMonth() +
+      //   "." +
+      //   tanggal.getDate() +
+      //   " " +
+      //   tanggal.getFullYear();
+      // // document.getElementsByClassName("demo1").textContent = "tanggal";
+      // tanggalText = document.getElementById("demo1");
+      // tanggalText.innerHTML = abc;
+      // tanggalText.style.background = "green";
+      //   timeS;
+
+      // console.log(tanggal);
+      // let test = (document.getElementById("demo").innerHTML = tanggal);
+      // }, 500);
+      setInterval(hitungTanggal, 1000);
+      function hitungTanggal() {
+        let tanggal = new Date();
+        document.getElementById("demo1").innerHTML =
+          tanggal.toLocaleTimeString();
+        document.getElementById("demo1").style.background = "green";
+      }
+
+      setInterval(function () {
+        let ukuranHuruf = (document.querySelector("p").style.fontSize =
+          "100px");
+        let randomColor = Math.floor(Math.random() * 16777215);
+        let changeColor = (document.querySelector("p").style.color =
+          "#" + randomColor);
+      }, 500);
+
+      //   randomColor.forEach((element) => {
+      //     element.style.fontSize = "100px";
+      //   });
+
+      let stringS = document.querySelectorAll("li");
+      let pola = /Ongoing|Coming/;
+      for (i = 0; i < stringS.length; i++) {
+        a = stringS[i].textContent;
+        if (a.match(pola) == "Ongoing") {
+          stringS[i].style.columnCount = "10px";
+          stringS[i].style.background = "yellow";
+        } else if (a.match(pola) == "Coming") {
+          stringS[i].style.background = "red";
+        } else {
+          stringS[i].style.background = "green";
+        }
+      }
+
+          // let testing
+      // for(i=1;i<=100;i++){
+      //   testing = document.createElement('div')
+      //   testing.textContent = i
+      //   document.body.appendChild(testing)
+      // }
+
+    </script>
+  </body>
+</html>

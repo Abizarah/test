@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="container">
+        <div id="search">
+            <label for="searchInput">Find <i class="fa fa-search"></i>Friends</label>
+            <input id="searchInput" type="text" placeholder="Search">
+        </div>
+        
+        <ul id="results">
+            <li class="name">Bob</li>
+            <li class="name">Kate</li>
+            <li class="name">Cindy</li>
+            <li class="name">Kelly</li>
+            <li class="name">Frank</li>
+            <li class="name">Joe</li>
+            <li class="name">Malaysia</li>
+            <li class="name">Brittney</li>
+            <li class="name">Mike</li>
+            <li class="name">Julian</li>
+            <li class="name">David</li>
+            <li class="name">Fred</li>
+            <li class="name">Jason</li>   
+        </ul>
+        
+    </div>
+        <script>
+            // get search bar element
+const searchInput = document.getElementById("searchInput");
+
+// store name elements in array-like object
+const namesFromDOM = document.getElementsByClassName("name");
+
+// listen for user events
+searchInput.addEventListener("keyup", (event) => {
+    const { value } = event.target;
+    console.log(value)
+    console.log(event.target)
+    
+    // get user search input converted to lowercase
+    const searchQuery = value.toLowerCase();
+    
+    for (const nameElement of namesFromDOM) {
+        // store name text and convert to lowercase
+        let name = nameElement.textContent.toLowerCase();
+        
+        // compare current name to search input
+        if (name.includes(searchQuery)) {
+            // found name matching search, display it
+            nameElement.style.display = "block";
+        } else {
+            // no match, don't display name
+            nameElement.style.display = "none";
+        }
+    }
+});
+        </script>
+    </body>
+</html>

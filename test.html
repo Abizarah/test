@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HomeWork</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- <div class="p1"></div> -->
+    <!-- <h1>Word Countries List</h1> -->
+    <!-- <div class="country"></div> -->
+    <!-- <div class="wrapper">
+    </div> -->
+
+<script src="country.js">
+  // console.log(country)
+</script>
+    <script> 
+      let title = document.createElement('div')
+        title.className = 'judul'
+        title.textContent = 'World Countries List'
+        title.style.fontSize = '30px'
+        document.body.appendChild(title)
+
+
+
+      // hitung Nilai yang ada pada array Countries
+        let coba = ''
+        for (let coun of countries){
+          coba = document.createElement('div')
+          coba.className= 'country'
+          coba.textContent = coun
+          document.body.appendChild(coba)
+        }
+        
+
+    </script>
+  </body>
+</html>

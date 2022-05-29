@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Event pada javascript</title>
+    <style>
+        .container {
+            border: 1px solid;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        #mass {
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50px;
+            margin: 10px;
+        }
+        #height {
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50px;
+            margin: 10px;
+        }
+        h1 {
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            padding: 50px;
+        }
+        button {
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            flex-direction: column; 
+            height: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Body Mass Index Calculate : </h1>
+        <input type="text" id="mass" placeholder="Mass in Kilogram"/>
+        <input type="text" id="height" placeholder="Height in Meters"/>
+        <button>Calculate BMI</button>
+        <p></p>
+    </div>
+    <script>
+        let mass = document.querySelector('#mass')
+        let height = document.querySelector('#height')
+        let button = document.querySelector('button')
+
+        let bmi 
+        button.addEventListener('click', ()=> {
+            bmi = mass.value / height.value **2
+            // bmi.toFixed(2)
+            document.body.append(`your mass ${bmi.toFixed(2)}`)
+        })
+        // document.body.appendChild(bmi)
+
+
+
+
+
+
+
+
+
+
+
+
+        //// EventListener on JavaScript
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('click', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('dblclick', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('mouseenter', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('mouseleave', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('keypress', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('mouseover', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('dblclick', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('dblclick', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // let tombol = document.createElement('button')
+        // tombol.className = 'btn-1'
+        // tombol.textContent = 'Klik di sini'
+        // tombol.addEventListener('dblclick', e => {
+        //     console.log('testing', e.target.textContent)
+        //     console.log('testing', e)
+            
+        // })
+        // document.body.appendChild(tombol)
+    </script>
+</body>
+</html>
